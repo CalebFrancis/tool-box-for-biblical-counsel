@@ -489,3 +489,32 @@ footer .footer-below {
     transform: translateZ(0);
     -webkit-transform: translateZ(0);
 }
+
+.condense-padding {
+    padding-left:4px;
+    padding-right:4px;
+}
+
+.zoom-container {
+    overflow: hidden;
+}
+
+.zoom-container img {
+    animation:image-unzoom 1s linear 0s normal forwards; /* causes a weird backward zoom on refresh but not a huge deal for now. Good for MVP */
+}
+
+.zoom-container:hover img {
+    animation:image-zoom;
+    animation-duration:1s;
+    animation:image-zoom 1s linear 0s 1 normal forwards;
+}
+
+@keyframes image-zoom {
+    0% {scale:1}
+    100% {scale:1.5}
+}
+
+@keyframes image-unzoom {
+    0% {scale:1.5}
+    100% {scale:1}
+}

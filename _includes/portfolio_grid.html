@@ -1,5 +1,5 @@
 <!-- Portfolio Grid Section -->
-<section id="portfolio">
+<section id="portfolio" xmlns="http://www.w3.org/1999/html">
   <div class="container portfolio-flex-grid">
     <div class="row">
       <div class="col-lg-12 text-center">
@@ -22,7 +22,7 @@
 
       {% endfor %}
     </div>-->
-    <div class="row">
+    <!--<div class="row">
     {% for post in site.posts %}
         <div class="col-lg-4 ministry-detail-link">
           <a href="#portfolioModal-{{ post.modal-id }}" class="portfolio-link" data-toggle="modal">
@@ -35,6 +35,21 @@
           </a>
         </div>
     {% endfor %}
+    </div>
+  </div>-->
+
+    <div class="container">
+      <div class="row">
+        {% for post in site.posts %}
+        <div class="col-md-4 condense-padding ministry-detail-link">
+          <a href="#portfolioModal-{{ post.modal-id }}" class="portfolio-link" data-toggle="modal">
+            <div class="zoom-container">
+              <img src="img/portfolio/{{ post.img }}" alt="{{ post.alt }}" class="img-responsive">
+            </div>
+          </a>
+        </div>
+        {% endfor %}
+      </div>
     </div>
   </div>
 </section>
