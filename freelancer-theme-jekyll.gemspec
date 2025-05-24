@@ -11,9 +11,9 @@ Gem::Specification.new do |spec|
 
   spec.metadata["plugin_type"] = "theme"
 
-  spec.files                   = `git ls-files -z`.split("\x0").select do |f|
-    f.match(%r{^(assets|_(includes|layouts|posts)/|(LICENSE|README)((\.(txt|md|markdown)|$)))}i)
-  end
+#  spec.files                   = `git ls-files -z`.split("\x0").select do |f|
+#    f.match(%r{^(assets|_(includes|layouts|posts)/|(LICENSE|README)((\.(txt|md|markdown)|$)))}i)
+ # end
 
   spec.add_runtime_dependency "jekyll", "~> 4.0"
   spec.add_runtime_dependency "jekyll-paginate", "~> 1.1"

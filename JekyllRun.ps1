@@ -1,0 +1,1 @@
+﻿wsl -u root -d Ubuntu -e ./JekyllRun.sh
